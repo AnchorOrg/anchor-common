@@ -35,13 +35,6 @@ publishing {
             from(components["java"])
         }
     }
-
-    // delz これらのログは全然出力しません
-    tasks.withType<PublishToMavenRepository>().configureEach {
-        doLast {
-            println("Publication to Maven repository completed.")
-        }
-    }
 }
 
 
