@@ -8,7 +8,6 @@ plugins {
 allprojects {
     apply(plugin = "test-convention")
     apply(plugin = "dependency-convention")
-    apply(plugin = "java-library")
 }
 
 idea {
@@ -19,13 +18,13 @@ idea {
 }
 
 subprojects {
+    apply(plugin = "java-library")
     apply(plugin = "publishing-conventions")
 
     dependencies {
         compileOnly("org.projectlombok:lombok:1.18.36")
     }
 }
-
 
 tasks.jar {
     manifest {
