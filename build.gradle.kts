@@ -5,6 +5,8 @@ plugins {
     id("com.github.ben-manes.versions") version "0.47.0"
 }
 
+// ingz https://www.one-tab.com/page/W6N5De8cRD-uOntFO7dAhA
+
 allprojects {
     apply(plugin = "test-convention")
     apply(plugin = "dependency-convention")
