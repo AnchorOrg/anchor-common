@@ -3,10 +3,9 @@ plugins {
 }
 
 dependencies {
-    testImplementation("org.junit:junit-bom:5.7.2")
+        testImplementation(kotlin("test"))
+
 }
-
-
-tasks.withType<Test>().configureEach {
+tasks.test {
     useJUnitPlatform()
 }
