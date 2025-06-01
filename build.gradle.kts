@@ -27,7 +27,6 @@ subprojects {
         compileOnly("org.projectlombok:lombok:1.18.36")
     }
 }
-
 tasks.jar {
     manifest {
         attributes(

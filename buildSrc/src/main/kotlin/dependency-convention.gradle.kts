@@ -1,10 +1,11 @@
 plugins {
     `java-library`
+    id("org.jetbrains.kotlin.jvm")
 }
 
 repositories {
     mavenLocal()
-
+    mavenCentral()
     gradlePluginPortal()
     google()
 }
