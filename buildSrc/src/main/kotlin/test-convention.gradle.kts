@@ -3,11 +3,13 @@ plugins {
     `java-library`
 }
 
+
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation("org.junit:junit-bom:5.7.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
 }
 
 
-tasks.test {
+tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
