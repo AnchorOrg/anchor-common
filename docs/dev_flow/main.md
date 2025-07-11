@@ -6,7 +6,7 @@
 
 ## 2. Technical Specification
 - Create your spec as the sub issue for the feature tasks. [example issue to follow the flow.](https://github.com/AnchorOrg/anchor-app/issues/65)
-- Design to be completed with the concept of MVP. Create the tech sepc as the sub issue of the assinged issues.
+- Design to be completed with the concept of MVP. Create the tech spec as the sub issue of the assigned issues.
 - Obtain approval from Team Lead
 - optional on bugs.
 ## 3. Development
