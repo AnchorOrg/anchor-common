@@ -23,6 +23,6 @@ Classify project work scale with the following tags and clearly define required 
 
 # Branch management
 - since the Copilot only able to check out the canary branch, therefore we regard the canary branch as the default branch and with the most drastic changes.
-  - Which means that any one could use the canary branch to assign some small task of your current ongoing feature development.
+  - This allows anyone to use the canary branch to assign small tasks within ongoing feature development.
   - However, the changes from the canary branch should not be merged to the feature development branch for the sake that you might merge commits from other feature branches. Therefore, create the patches showing the differences between the branch created by the copilot and the canary branch is recommended.
 - Normally we create PR on the main branch, and then merge it to the canary branch.
