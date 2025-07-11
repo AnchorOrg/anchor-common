@@ -2,3 +2,5 @@
 rootProject.name = "anchor-common"
 // controller, service, repository support
 include("csr-support")
+// frontend internationalization support
+include("af-fe")
