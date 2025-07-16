@@ -50,19 +50,19 @@ class BaseServiceTest {
     fun `should delete all entities successfully`() {
         baseService.upsert(TestAuditableBaseEntity("test1"))
         baseService.upsert(TestAuditableBaseEntity("test2"))
-        assertEquals(2, baseService.count()) // 確認用
+        assertEquals(2, baseService.count()) // Verification
 
         baseService.deleteAll()
-        assertEquals(0, baseService.count()) // すべて削除されたことを確認
+        assertEquals(0, baseService.count()) // Verify all entities were deleted
     }
 
     @Test
     fun `should delete entity by ID successfully`() {
         val entity = baseService.upsert(TestAuditableBaseEntity("testValue"))
-        assertTrue(baseService.exists(entity.id!!)) // 確認用
+        assertTrue(baseService.exists(entity.id!!)) // Verification
 
         baseService.delete(entity.id!!)
-        assertFalse(baseService.exists(entity.id!!)) // ID で削除されたことを確認
+        assertFalse(baseService.exists(entity.id!!)) // Verify entity was deleted by ID
     }
 
     @Test
@@ -76,7 +76,7 @@ class BaseServiceTest {
     fun `should delete multiple entities by IDs successfully`() {
         val entity1 = baseService.upsert(TestAuditableBaseEntity("test1"))
         val entity2 = baseService.upsert(TestAuditableBaseEntity("test2"))
-        assertEquals(2, baseService.count()) // 確認用
+        assertEquals(2, baseService.count()) // Verification
 
         baseService.delete(listOf(entity1.id!!, entity2.id!!))
         assertEquals(0, baseService.count())
@@ -105,7 +105,7 @@ class BaseServiceTest {
         baseService.flush()
 
         val foundEntity = baseService.findOne(entity.id!!)
-        assertEquals("updatedValue", foundEntity.text) // 変更がDBに反映されたことを確認
+        assertEquals("updatedValue", foundEntity.text) // Verify changes were reflected in DB
     }
 
     @Test
