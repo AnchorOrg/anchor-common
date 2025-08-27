@@ -1,1 +1,1 @@
-GET http://localhost:7001/anchor-focus/api/health/open
+GET http://localhost:7001/app/api/health/open
