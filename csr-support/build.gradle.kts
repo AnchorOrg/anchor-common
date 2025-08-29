@@ -8,6 +8,20 @@ plugins {
     id("org.jetbrains.kotlin.plugin.jpa") version VersionManagement.Kotlin.VERSION
 }
 
+// Configure JVM compatibility for Java 17 target
+// Fixes: https://github.com/AnchorOrg/anchor-app/issues/217
+// Using Java 17 as the target for maximum compatibility
+tasks.withType<JavaCompile> {
+    sourceCompatibility = "17"
+    targetCompatibility = "17"
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
 
 // disable spring boot packaging
 tasks.getByName("bootJar") {
