@@ -3,16 +3,18 @@ plugins {
     id("org.jetbrains.kotlin.jvm")
 }
 
-// Configure JVM toolchain to use Java 17 for compatibility
+// Configure JVM compatibility for Java 17 target
 // Fixes: https://github.com/AnchorOrg/anchor-app/issues/217
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
+// Using Java 17 as the target for maximum compatibility
+tasks.withType<JavaCompile> {
+    sourceCompatibility = "17"
+    targetCompatibility = "17"
 }
 
-kotlin {
-    jvmToolchain(17)
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 repositories {
